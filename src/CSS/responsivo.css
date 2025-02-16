@@ -21,6 +21,7 @@
         padding: 0 30px;
     }
 
+    
 }
 
 @media(max-width:425px){
@@ -40,5 +41,49 @@
         padding: 30px;
 
     }
+
+    .cabecalho .menu li a{
+        font-size: 11px;
+    }
+
+    .cabecalho .logo{
+    
+        width: 60px;
+        height: 60px;
+        /*arredonda as bordas da logo*/
+        border-radius: 50px;
+        /*Cria uma borda*/
+        border: 2px solid #fff;
+        text-decoration: underline;
+        /*Centraliza o texto dentro da borda e muda a altura da linha*/
+        text-align: center;
+        line-height: 56px;
+        /*Mudar a fonte*/
+        font-family: "Raleway",sans-serif;
+        /*Tempo de transiçào*/
+        transition: 0.2s;
+        font-size: 25px;
+         
+    }
+
+    .cabecalho .logo::before{
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border: 3px solid transparent;
+        box-sizing: border-box;
+        border-radius: 50px; /* Adicione bordas arredondadas ao pseudoelemento */
+        animation: border-animation 5s linear infinite;
+        padding: -7px 70px;
+    
+    }
+
+    /*Efeito sobre a Logo*/
+        .cabecalho a:hover .logo{
+        color: #9443d8 ;
+        border: 2px solid  #9443d8;
+        transform: scale(1.1);
+        }
 
 }
